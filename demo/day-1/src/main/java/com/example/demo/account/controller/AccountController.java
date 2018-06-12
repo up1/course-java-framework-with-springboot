@@ -18,11 +18,6 @@ public class AccountController {
     @Autowired
     private AccountRepository accountRepository;
 
-    @Autowired
-    public AccountController(AccountRepository accountRepository) {
-        this.accountRepository = accountRepository;
-    }
-
     @GetMapping("/account/{mobileNo}")
     public List<AccountResponse> getAccounts(
             @PathVariable String mobileNo) {
