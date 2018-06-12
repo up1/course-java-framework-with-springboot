@@ -1,0 +1,27 @@
+===== REST =====
+inquiryXXX
+insertXXX
+deleteXXX
+findXXXXWithYYYY
+
+GET users/page/1/item/50
+GET users?page=1&item=50
+
+GET user/1
+POST user
+PUT user/1
+DELETE user/1
+
+===== Run Spring Boot =====
+mvnw.cmd package
+java -jar target/demo-0.0.1-SNAPSHOT.jar
+./mvnw spring-boot:run -Ddebug
+./mvnw spring-boot:run
+
+JAVA_HOME
+set JAVA_HOME=c:\jdk\
+set PATH=.;%JAVA_HOME%\bin;%PATH%
+echo %PATH%
+
+java -version
+javac -version
