@@ -6,3 +6,12 @@ info:
 management:
   security:
     enabled: false
+
+spring:
+  jpa:
+    show-sql: true
+    hibernate:
+        ddl-auto: none
+        naming:
+          physical-strategy: org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy
+          implicit-strategy: org.springframework.boot.orm.jpa.hibernate.SpringImplicitNamingStrategy
