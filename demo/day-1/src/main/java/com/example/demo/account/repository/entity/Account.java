@@ -13,6 +13,13 @@ public class Account {
     private String name;
     private String accountType;
 
+    public Account() {
+    }
+
+    public Account(String accountId) {
+        this.accountId = accountId;
+    }
+
     public int getId() {
         return id;
     }

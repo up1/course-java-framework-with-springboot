@@ -23,7 +23,7 @@ public class AccountRepositoryTest {
     ทำการสร้างหนึ่งบัญชีลงฐานข้อมูล() {
         // Arrange
         Account newAccount = new Account();
-        newAccount.setAccountId("01");
+        newAccount.setAccountId("03");
         newAccount.setMobileNo("0868696209");
 
         // Action
@@ -33,7 +33,7 @@ public class AccountRepositoryTest {
         // Assert
         assertNotNull(actualAccount);
         assertTrue(actualAccount.getId() > 0);
-        assertEquals("01", actualAccount.getAccountId());
+        assertEquals("03", actualAccount.getAccountId());
     }
 
     @Test
@@ -44,7 +44,7 @@ public class AccountRepositoryTest {
 
         // Insert new account
         Account newAccount = new Account();
-        newAccount.setAccountId("02");
+        newAccount.setAccountId("03");
         newAccount.setMobileNo("0868696209");
         accountRepository.save(newAccount);
 
