@@ -1,6 +1,9 @@
 package com.example.demo.account.controller;
 
 import com.example.demo.account.model.AccountResponse;
+import com.example.demo.account.repository.AccountRepository;
+import com.example.demo.account.repository.entity.Account;
+import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,6 +23,15 @@ public class AccountControllerTest {
 
     @Autowired
     private TestRestTemplate testRestTemplate;
+
+    @Autowired
+    private AccountRepository accountRepository;
+
+    @Before
+    public void initialDataForTest() {
+        accountRepository.save(new Account("T01"));
+        accountRepository.save(new Account("T02"));
+    }
 
     @Test
     public void

@@ -38,14 +38,14 @@ public class AccountController {
         return foundAccountResponses;
     }
 
-    @PostConstruct
-    public void initData() {
-        Account account1 = new Account();
-        account1.setAccountId("01");
-        accountRepository.save(account1);
-        Account account2 = new Account();
-        account2.setAccountId("02");
-        accountRepository.save(account2);
-    }
+//    @PostConstruct
+//    public void initData() {
+//        Account account1 = new Account();
+//        account1.setAccountId("01");
+//        accountRepository.save(account1);
+//        Account account2 = new Account();
+//        account2.setAccountId("02");
+//        accountRepository.save(account2);
+//    }
 
 }
