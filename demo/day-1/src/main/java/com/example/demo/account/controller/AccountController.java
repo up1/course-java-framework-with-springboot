@@ -18,15 +18,19 @@ public class AccountController {
     @Autowired
     private AccountRepository accountRepository;
 
+    public void setAccountRepository(AccountRepository accountRepository) {
+        this.accountRepository = accountRepository;
+    }
+
     @GetMapping("/account/{mobileNo}")
     public List<AccountResponse> getAccounts(
             @PathVariable String mobileNo) {
-//        foundAccountResponses.add(
-//                new AccountResponse("1", mobileNo, "name 1", "CA"));
-//        foundAccountResponses.add(
-//                new AccountResponse("2", mobileNo, "name 2", "SA"));
+
         List<Account> accounts
                 = (List<Account>) accountRepository.findAll();
+        if(accounts == null) {
+            accounts = new ArrayList<>();
+        }
 
         // Convert from Account to AccountResponse
         List<AccountResponse> foundAccountResponses = new ArrayList<>();
