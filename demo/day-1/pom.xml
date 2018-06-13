@@ -73,7 +73,14 @@
             <scope>test</scope>
         </dependency>
 
-	</dependencies>
+        <dependency>
+            <groupId>io.micrometer</groupId>
+            <artifactId>micrometer-registry-prometheus</artifactId>
+            <version>1.0.4</version>
+        </dependency>
+
+
+    </dependencies>
 
 	<build>
 		<finalName>hello</finalName>

@@ -29,3 +29,4 @@ info:
 management:
   security:
     enabled: false
+  endpoints.web.exposure.include: metrics,httptrace,prometheus
