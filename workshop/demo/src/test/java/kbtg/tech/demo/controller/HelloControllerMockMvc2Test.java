@@ -53,8 +53,8 @@ public class HelloControllerMockMvc2Test {
            = mockMvc.perform(get("/hello/somkiat"))
              .andReturn().getResponse();  
         
-        String expected 
-        = tester.write(new HelloResponse("Hello, somkiat")).getJson();
+        String expected = tester.write(
+                new HelloResponse("Hello, somkiat")).getJson();
         
         assertEquals(expected, response.getContentAsString());
     }
