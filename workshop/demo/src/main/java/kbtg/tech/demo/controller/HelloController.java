@@ -11,8 +11,12 @@ import kbtg.tech.demo.service.MessageService;
 @RestController
 public class HelloController {
     
-    @Autowired
     private MessageService messageService;
+    
+    @Autowired
+    public HelloController(MessageService messageService) {
+        this.messageService = messageService;
+    }
 	
 	@GetMapping("/hello/{name}")
 	public HelloResponse 
@@ -20,9 +24,5 @@ public class HelloController {
 	    String result = messageService.concat(name);
 	    return new HelloResponse(result);
 	}
-
-    public void setMessageService(MessageService messageService) {
-        this.messageService = messageService;
-    }
 
 }

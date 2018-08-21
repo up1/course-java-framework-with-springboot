@@ -22,8 +22,7 @@ public class HelloControllerUnitTest {
     @Before
     public void initial() {
        MockitoAnnotations.initMocks(this);
-       helloController = new HelloController();
-       helloController.setMessageService(messageService);
+       helloController = new HelloController(messageService);
     }
     
     @Test
