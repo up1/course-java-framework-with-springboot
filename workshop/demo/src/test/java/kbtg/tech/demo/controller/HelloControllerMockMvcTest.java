@@ -10,6 +10,7 @@ import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 
+import kbtg.tech.demo.repository.MessageRepository;
 import kbtg.tech.demo.service.MessageService;
 
 import static 
@@ -28,6 +29,10 @@ public class HelloControllerMockMvcTest {
     
     @MockBean
     private MessageService messageService;
+    
+    @MockBean
+    private MessageRepository messageRepository;
+    
     
     @Test
     public void success_with_correct_message() throws Exception {

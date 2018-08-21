@@ -21,6 +21,7 @@ import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import kbtg.tech.demo.controller.response.HelloResponse;
+import kbtg.tech.demo.repository.MessageRepository;
 import kbtg.tech.demo.service.MessageService;
 
 import static 
@@ -37,6 +38,9 @@ public class HelloControllerMockMvc2Test {
     
     @MockBean
     private MessageService messageService;
+    
+    @MockBean
+    private MessageRepository messageRepository;
     
     private JacksonTester<HelloResponse> tester;
     

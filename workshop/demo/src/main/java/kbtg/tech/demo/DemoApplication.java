@@ -23,14 +23,5 @@ public class DemoApplication {
             message1.setData("somkiat");
             repository.save(message1);
 	    };
-//        return new CommandLineRunner() {
-//            
-//            @Override
-//            public void run(String... args) throws Exception {
-//                Message message1 = new Message();
-//                message1.setData("somkiat");
-//                repository.save(message1);
-//            }
-//        };
 	}
 }
