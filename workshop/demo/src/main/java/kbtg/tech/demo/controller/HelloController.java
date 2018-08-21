@@ -15,7 +15,14 @@ public class HelloController {
     
     @Autowired
     public HelloController(MessageService messageService) {
-        this.messageService = messageService;
+        this.messageService = messageService; 
+    }
+    
+    @GetMapping("/hey/{id}")
+    public HelloResponse 
+        hey(@PathVariable int id) {
+        String result = messageService.getNameById(id);
+        return new HelloResponse(result);
     }
 	
 	@GetMapping("/hello/{name}")
