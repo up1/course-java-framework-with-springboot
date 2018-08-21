@@ -32,7 +32,7 @@ public class HelloControllerMockMvcTest {
     @Test
     public void success_with_correct_message() throws Exception {
         given(messageService.concat("somkiat"))
-        .willReturn("Hello, somkiat");
+        .willReturn("Hello, somkiat"); 
         
         mockMvc.perform(get("/hello/somkiat"))
             .andExpect(

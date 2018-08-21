@@ -21,4 +21,8 @@ public class HelloController {
 	    return new HelloResponse(result);
 	}
 
+    public void setMessageService(MessageService messageService) {
+        this.messageService = messageService;
+    }
+
 }
