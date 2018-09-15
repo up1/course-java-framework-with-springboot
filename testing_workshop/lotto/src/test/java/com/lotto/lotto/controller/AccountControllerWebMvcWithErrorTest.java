@@ -1,8 +1,10 @@
 package com.lotto.lotto.controller;
 
+import com.lotto.lotto.category.SlicingTest;
 import com.lotto.lotto.exception.MyAccountNotFoundException;
 import com.lotto.lotto.service.UserService;
 import org.junit.Test;
+import org.junit.experimental.categories.Category;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
@@ -18,6 +20,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 @RunWith(SpringRunner.class)
 @WebMvcTest(AccountController.class)
+@Category(SlicingTest.class)
 public class AccountControllerWebMvcWithErrorTest {
 
     @Autowired
