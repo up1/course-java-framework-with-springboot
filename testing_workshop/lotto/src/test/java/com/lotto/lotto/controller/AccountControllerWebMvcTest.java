@@ -4,6 +4,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.lotto.lotto.controller.response.AccountResponse;
 import com.lotto.lotto.model.Account;
 import com.lotto.lotto.repository.AccountRepository;
+import com.lotto.lotto.service.UserService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,7 +33,7 @@ public class AccountControllerWebMvcTest {
     private JacksonTester<AccountResponse> jsonTester;
 
     @MockBean
-    private AccountRepository accountRepository;
+    private UserService userService;
 
     @Test
     public void getById() throws Exception {
@@ -43,8 +44,8 @@ public class AccountControllerWebMvcTest {
         account.setUserName("user");
         account.setPassword("pass");
         account.setSalary(1000);
-        given(accountRepository.findById(1))
-                .willReturn(Optional.of(account));
+        given(userService.getAccount(1))
+                .willReturn(account);
 
         MockHttpServletResponse response
                 = mockMvc.perform(
