@@ -15,14 +15,21 @@ import java.util.Optional;
 @RestController
 public class AccountController {
 
-    @Autowired
     private AccountRepository accountRepository;
+
+    @Autowired
+    public AccountController(AccountRepository accountRepository) {
+        this.accountRepository = accountRepository;
+    }
 
     @GetMapping("/account/{id}")
     public AccountResponse getById(
             @PathVariable int id) {
         Optional<Account> account = accountRepository.findById(id);
         if(account.isPresent()) {
+            if(account == null) {
+                account = Optional.empty();
+            }
             Account myAccount = account.get();
             return new AccountResponse(
                     myAccount.getUserName(),
@@ -37,6 +44,7 @@ public class AccountController {
     @PostConstruct
     public void initData() {
         Account account = new Account();
+        account.setId(1);
         account.setUserName("fakeuser");
         account.setPassword("fakepass");
         accountRepository.save(account);

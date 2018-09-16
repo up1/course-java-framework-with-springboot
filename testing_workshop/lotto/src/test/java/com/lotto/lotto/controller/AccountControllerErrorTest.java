@@ -2,7 +2,7 @@ package com.lotto.lotto.controller;
 
 import com.lotto.lotto.category.IntegrationTest;
 import com.lotto.lotto.controller.response.AccountResponse;
-import com.lotto.lotto.model.Account;
+import com.lotto.lotto.exception.ResponseException;
 import com.lotto.lotto.repository.AccountRepository;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
@@ -14,13 +14,14 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import static org.junit.Assert.*;
-import static org.springframework.boot.test.context.SpringBootTest.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
+import static org.springframework.boot.test.context.SpringBootTest.WebEnvironment;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT)
 @Category(IntegrationTest.class)
-public class AccountControllerTest {
+public class AccountControllerErrorTest {
 
     @Autowired
     private TestRestTemplate testRestTemplate;
@@ -29,24 +30,22 @@ public class AccountControllerTest {
     private AccountRepository accountRepository;
 
     @Test
-    public void getById() {
-        // Init data
-        Account account = new Account();
-        account.setId(1);
-        account.setUserName("fakeuser");
-        account.setPassword("fakepass");
-        accountRepository.save(account);
+    public void getByIdWithAccountNotFound() {
+        // Clear data
+        try {
+            accountRepository.deleteById(2);
+        } catch (Exception e) {}
 
         // Action
-        ResponseEntity<AccountResponse> result =
+        ResponseEntity<ResponseException> result =
               testRestTemplate
-                      .getForEntity("/account/1"
-                                    , AccountResponse.class);
+                      .getForEntity("/account/2"
+                                    , ResponseException.class);
 
         // Assert
-        assertEquals(HttpStatus.OK, result.getStatusCode());
-        AccountResponse expected
-                = new AccountResponse("fakeuser", "fakepass", 0);
-        assertEquals(expected, result.getBody());
+        assertEquals(HttpStatus.NOT_FOUND, result.getStatusCode());
+        assertEquals("Account id=[2] not found",
+                result.getBody().getMessage());
+        assertNotNull(result.getBody().getDate());
     }
 }
