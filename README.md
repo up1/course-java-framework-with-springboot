@@ -13,7 +13,7 @@
 ### Day 2
 * Working with Code coverage
   * [Jacoco](https://www.jacoco.org/)
-  * Cobertura
+  * [Cobertura](http://cobertura.github.io/cobertura/)
 * Working with Database
 * Testing strategies
   * Unit testing
