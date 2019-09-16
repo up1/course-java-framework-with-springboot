@@ -9,6 +9,7 @@
 * How to testing with Spring Boot project ?
   * Controller Testing
   * Repository Testing
+  * API Testing
 
 ### Day 2
 * Working with Code coverage
@@ -22,7 +23,11 @@
   * Repository Testing
   * Use Mocking tool such as [Mockito](http://site.mockito.org/)
 * Demo: Working with MongoDB
-* Demo: How to use Docker with Spring Boot ?
+* How to use Docker with Spring Boot
+  * Build Docker Image
+  * Ship Docker Image to Registry
+  * Run container from Docker Image
+
 
 ## Code Example
 * [Workshop](https://github.com/up1/workshop-springboot-20190304)
