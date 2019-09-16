@@ -1,4 +1,4 @@
-# Course Java Framework with Spring Boot
+# Course :: Java Framework with Spring Boot
 
 ### Day 1
 * All about REST
