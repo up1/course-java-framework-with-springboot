@@ -28,6 +28,9 @@
   * Ship Docker Image to Registry
   * Run container from Docker Image
 
+## Sample code for RESTFul API with Spring boot workshop
+* [Workshop Bad Code and Refactor](https://github.com/up1/workshop-advance-java-01/tree/main/workshop01)
+* [Workshop REST API](https://github.com/up1/course-springboot-2020/wiki/Workshop-REST-API)
 
 ## Code Example
 * [Workshop](https://github.com/up1/workshop-springboot-20190304)
