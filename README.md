@@ -35,3 +35,6 @@
 ## Code Example
 * [Workshop](https://github.com/up1/workshop-springboot-20190304)
 * [Spring Boot with MongoDB](https://github.com/up1/demo-spring-boot-2-with-mongodb)
+* [Working with ActiveMQ]
+  * [Producer](https://github.com/up1/workshop-java-framework-20210301/tree/main/demo_activemq)
+  * [Consumer](https://github.com/up1/workshop-java-framework-20210301/tree/main/demo_activemq-consumer)
