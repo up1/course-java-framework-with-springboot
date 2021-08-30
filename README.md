@@ -38,3 +38,7 @@
 * [Working with ActiveMQ]
   * [Producer](https://github.com/up1/workshop-java-framework-20210301/tree/main/demo_activemq)
   * [Consumer](https://github.com/up1/workshop-java-framework-20210301/tree/main/demo_activemq-consumer)
+
+
+## References
+* https://github.com/up1/course-tdd-with-java
