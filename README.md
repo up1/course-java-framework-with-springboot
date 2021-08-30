@@ -1,6 +1,8 @@
 # Course :: Java Framework with Spring Boot
 
 ### Day 1
+* Test-Driven Development (TDD)
+* Working with JUnit 5
 * All about REST
 * Java Web Frameworks
 * Introduction to Spring Boot
