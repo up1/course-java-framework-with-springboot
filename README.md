@@ -3,6 +3,8 @@
 ### Day 1
 * Test-Driven Development (TDD)
 * Working with JUnit 5
+* Code smell and Refactoring
+  * [Workshop bad code](https://github.com/up1/workshop-java-badcode)
 * All about REST
 * Java Web Frameworks
 * Introduction to Spring Boot
