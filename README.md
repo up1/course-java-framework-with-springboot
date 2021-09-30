@@ -1,4 +1,4 @@
-# Course :: Java Framework with Spring Boot
+# Course :: TDD, Reactoring and Java Framework with Spring Boot
 
 ### Day 1
 * Test-Driven Development (TDD)
